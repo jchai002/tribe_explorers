@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get '/users/search' => 'users#search'
   get '/search' => 'users#search'
   get '/find-family' => 'users#family'
+  get '/notice' => 'users#notice'
 
   get '/login' => 'sessions#new'
   post '/sessions' => 'sessions#create'
