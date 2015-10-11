@@ -15,14 +15,14 @@
   <section class="top-bar-section hide-for-small">
 
     <ul class="right">
-      <li><a id="stills-button">Stills</a></li>
-      <li class="divider"></li>
-      <li><a id="videos-button">Motion</a></li>
-      <li class="divider"></li>
       <li><a id="about-button">About</a></li>
       <li class="divider"></li>
       <li><a id="contact-button">Contact</a></li>
       <li class="divider"></li>
+      <% if current_user %>
+        <li><%= link_to "Log Out", logout_path, method: "delete" %></li>
+        <li class="divider"></li>
+      <% end %>
     </ul>
   </section>
 </nav>
