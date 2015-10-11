@@ -1,0 +1,55 @@
+	h1,p,label,li{
+ color:#2ccbdd;
+}
+
+ .flex
+   {
+      /* basic styling */
+      width: auto;
+      height: 200px;
+      border: 1px solid #555;
+      font: 14px Arial;
+
+      /* flexbox setup */
+      display: -webkit-flex;
+      -webkit-flex-direction: row;
+
+      display: flex;
+      flex-direction: row;
+   }
+
+   .flex > div
+   {
+      -webkit-flex: 1 1 auto;
+      flex: 1 1 auto;
+
+      width: 30px; /* To make the transition work nicely.  (Transitions to/from
+                      "width:auto" are buggy in Gecko and Webkit, at least.
+                      See http://bugzil.la/731886 for more info.) */
+
+      -webkit-transition: width 0.7s ease-out;
+      transition: width 0.7s ease-out;
+   }
+
+   .session-bg {
+ -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-image: url("session-bg");
+  background-repeat: no-repeat;
+   -webkit-filter: sepia(20%);
+  -moz-filter: sepia(20%);
+  -o-filter: sepia(20%);
+  -ms-filter: sepia(20%);
+  filter: sepia(20%);
+   }
+    .session 
+   {
+      background-color: rgba( #fcfcfc, 0.5 );
+      margin-top: 10%;
+      margin-bottom: 10%;
+      padding: 5em;
+      width: auto;
+      height: 30%;
+   }
