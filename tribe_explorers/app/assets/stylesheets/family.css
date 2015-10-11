@@ -1,3 +1,18 @@
 .search-river{
   text-decoration: none;
+  width: 100%;
+  text-align: center;
+}
+
+.find-family{
+  display: inline-block;
+  width: 40%;
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.unfocus {
+  opacity: 0.2;
 }

@@ -1,6 +1,5 @@
 <div class="hidden">
-  <li>
-<div class="small-5 columns" data-form="search">
+<div class="unfocus find-family small-5 columns" data-form="search">
   <%= form_for user, url: search_path do |f| %>
       <div class="small-3 columns">
         <%= label_tag(:firstname, "given name") %>
@@ -24,12 +23,11 @@
         <%= label_tag(:country_of_birth, "country_of_birth")%>
       </div>
       <div class="small-6 columns">
-        <select>
+        <select data-select="country">
         </div>
     
 <!--         <%= f.submit "Submit", class:"button" %></span> -->
   <% end %>
 </div>
 </div>
-</li>
 </div>
