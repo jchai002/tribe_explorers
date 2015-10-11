@@ -7,10 +7,16 @@ class UsersController < ApplicationController
   end
 
   def create
+    qr_params = user_params.to_a.join
+    @qr = RQRCode::QRCode.new(qr_params)
+    
+    @hash = [('a'..'z'), ('A'..'Z')].map { |i| i.to_a }.flatten
+    @string = (0...50).map { @hash[rand(@hash.length)] }.join
+
     @user = User.new(user_params)
     if @user.save
       session[:user_id] = @user.id
-      redirect_to dashboard_path
+      render 'qr_codes/new'
     else
       error
     end
