@@ -1,31 +1,30 @@
 <div class="content">
 <div class="row">
- <div class="small-12 medium-9 medium-centered columns">
-    <%= link_to "Back", dashboard_path %>
+ <div class="small-12 medium-9 medium-centered text-center columns">
+    <%=image_tag('profile-navigation.png')%>
+    <br><br>
+    <%=image_tag('profile.png', :id=>"profile-pic")%>
     <h1 class="text-center"><%= @user.firstname.capitalize %> <%= @user.lastname.capitalize %></h1>
+    <h4>Last login: <%= timestamp(@user.updated_at) %></h4>
+    <br>
+    <p><%= link_to "Update My Info", edit_user_path(@user), class: "button round" %></p>
 
-    <%= @user.picture %>
+    <ul class="no-bullet text-left vcard">
 
-    <p class="text-center"><%= link_to "Update My Info", edit_user_path(@user), class: "button" %></p>
+    <li><% unless @user.dob.nil? %>
+    Date of Birth: <span class="state"><%= @user.dob %></span><br>
+    <% end %></li>
 
-    <% unless @user.dob.nil? %>
-      Date of Birth: <%= @user.dob %><br>
-    <% end %>
-
-    <% unless @user.city_of_birth.nil? %>
-      Born in <%= @user.city_of_birth %>, <%= @user.country_of_birth %><br>
-    <% end %>
-
-    <% unless @user.city_of_origin.nil? %>
-      Came from <%= @user.city_of_origin %>, <%= @user.country_of_origin %><br>
-    <% end %>
-
+    <li>
     <% unless @user.current_city.nil? %>
-      Current city: <%= @user.current_city %>
-    <% end %>
+    Current city: <span class="state"><%= @user.current_city %></span>
+    <% end %></li>
 
-    Last logged in on <%= timestamp(@user.updated_at) %>
-
+    <li>
+    <% unless @user.city_of_birth.nil? %>
+    Place of Birth: <span class="state"><%= @user.city_of_birth %>, <%= @user.country_of_birth %><br>
+    <% end %></li>
+    </ul>
   </div>
 </div>
 </div>
