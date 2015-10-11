@@ -38,15 +38,10 @@
   background-size: cover;
   background-image: url("session-bg");
   background-repeat: no-repeat;
-   -webkit-filter: sepia(20%);
-  -moz-filter: sepia(20%);
-  -o-filter: sepia(20%);
-  -ms-filter: sepia(20%);
-  filter: sepia(20%);
    }
     .session 
    {
-      background-color: rgba( #fcfcfc, 0.5 );
+      background-color: rgba( #fcfcfc, 0.7 );
       margin-top: 10%;
       margin-bottom: 10%;
       padding: 5em;
