@@ -27,8 +27,8 @@ ActiveRecord::Schema.define(version: 20151011155420) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "firstname",         null: false
-    t.string   "lastname",          null: false
+    t.string   "firstname",          null: false
+    t.string   "lastname",           null: false
     t.string   "picture"
     t.string   "country_of_birth"
     t.string   "country_of_origin"
@@ -37,11 +37,14 @@ ActiveRecord::Schema.define(version: 20151011155420) do
     t.string   "city_of_birth"
     t.string   "city_of_origin"
     t.string   "dob"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
     t.string   "key"
     t.string   "gender"
     t.string   "phone_number"
+    t.string   "spoken_languages"
+    t.integer  "number_of_people"
+    t.integer  "number_of_children"
   end
 
 end
