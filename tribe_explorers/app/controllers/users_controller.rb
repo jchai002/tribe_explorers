@@ -16,6 +16,11 @@ class UsersController < ApplicationController
     end
   end
 
+  def edit
+    @user = current_user
+    @country = Country.all
+  end
+
   def update
     @user = current_user
     if @user.update_attributes(user_params)
