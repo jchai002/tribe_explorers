@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
     user = User.find_by(key: params[:session][:key])
     if user
       session[:user_id] = user.id
-      redirect_to welcome_path
+      redirect_to dashboard_path
     end
   end
 

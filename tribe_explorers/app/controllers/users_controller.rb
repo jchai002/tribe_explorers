@@ -14,11 +14,25 @@ class UsersController < ApplicationController
     end
   end
 
+  def search
+    if User.where(user_params).first
+      render nothing: true, status: 200
+    else
+      render nothing: true, status: 404
+    end
+  end
+
+  def family
+    @user = User.new
+    render "users/family"
+  end
+
   def show
     @user = User.find(params[:id])
   end
 
-  def find_user
+  def dashboard
+    @user = User.find(session[:user_id])
   end
 
   private
