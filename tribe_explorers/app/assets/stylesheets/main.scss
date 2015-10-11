@@ -1,35 +1,33 @@
-	h1,p,label,li{
+h1,p,label,li {
  color:#2ccbdd;
 }
 
- .flex
-   {
-      /* basic styling */
-      width: auto;
-      height: auto;
+ .flex {
+  /* basic styling */
+  width: auto;
+  height: auto;
 
-      /* flexbox setup */
-      display: -webkit-flex;
-      -webkit-flex-direction: row;
+  /* flexbox setup */
+  display: -webkit-flex;
+  -webkit-flex-direction: row;
 
-      display: flex;
-      flex-direction: row;
-   }
+  display: flex;
+  flex-direction: row;
+}
 
-   .flex > div
-   {
-      -webkit-flex: 1 1 auto;
-      flex: 1 1 auto;
+.flex > div {
+  -webkit-flex: 1 1 auto;
+  flex: 1 1 auto;
 
-      width: 30px; /* To make the transition work nicely.  (Transitions to/from
-                      "width:auto" are buggy in Gecko and Webkit, at least.
-                      See http://bugzil.la/731886 for more info.) */
+  width: 30px; /* To make the transition work nicely.  (Transitions to/from
+                  "width:auto" are buggy in Gecko and Webkit, at least.
+                  See http://bugzil.la/731886 for more info.) */
 
-      -webkit-transition: width 0.7s ease-out;
-      transition: width 0.7s ease-out;
-   }
+  -webkit-transition: width 0.7s ease-out;
+  transition: width 0.7s ease-out;
+ }
 
-   .session-bg {
+.session-bg {
  -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -37,18 +35,47 @@
   background-image: url("session-bg");
   background-repeat: no-repeat;
    }
-    .session
-   {
-      background-color: rgba( #fcfcfc, 0.7 );
-      margin-top: 10%;
-      margin-bottom: 10%;
-      padding: 5em;
-      width: auto;
-      height: 30%;
-   }
 
-   .content {
-    margin: 2em;
-   }
-   
+.session {
+  background-color: rgba( #fcfcfc, 0.7 );
+  margin-top: 10%;
+  margin-bottom: 10%;
+  padding: 5em;
+  width: auto;
+  height: 30%;
+}
 
+.content {
+  margin: 2em;
+}
+
+.registration {
+  background: #2CCBDD;
+
+  table {
+    background: #2CCBDD;
+    border: none;
+  }
+
+  td {
+    background: #2CCBDD;
+  }
+
+  input {
+    border: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+}
+
+.label {
+  background: #FFF;
+  color: #000;
+  width: 100%;
+  text-align: left;
+}
+
+.white {
+  color: #FFF;
+}

@@ -1,32 +1,32 @@
 <%= form_for @user do |f| %>
-  <table>
-    <tr><td class="form-label">REGISTRATION</td></tr>
+  <table class="white">
+    <tr><td class="white">REGISTRATION</td></tr>
     <tr>
       <td>
-        <span><%= label_tag(:firstname, "first name") %><%= f.text_field :firstname %></span>
+        <span><%= label_tag(:firstname, "first name", class: "label" ) %><%= f.text_field :firstname %></span>
       </td>
       <td>
-        <span><%= label_tag(:lastname, "last name") %><%= f.text_field :lastname %></span>
+        <span><%= label_tag(:lastname, "last name", class: "label") %><%= f.text_field :lastname %></span>
       </td>
     </tr>
     <tr>
       <td colspan="2">
-        <span><%= label_tag(:dob, "date of birth") %><%= f.text_field :dob %></span>
+        <span><%= label_tag(:dob, "date of birth", class: "label") %><%= f.text_field :dob %></span>
       </td>
     </tr>
     <tr>
       <td colspan="2">
-        <%= label_tag(:gender, "gender") %>
+        <%= label_tag(:gender, "gender", class: "label") %>
         Female <%= f.radio_button :gender, "female" %>
         Male <%= f.radio_button :gender, "male" %>
       </td>
     </tr>
     <tr>
       <td>
-        <span><%= label_tag(:city_of_birth, "city of birth") %><%= f.text_field :city_of_birth%></span>
+        <span><%= label_tag(:city_of_birth, "city of birth", class: "label") %><%= f.text_field :city_of_birth%></span>
       </td>
       <td>
-        <span><%= label_tag(:country_of_birth, "country of birth")%><select>
+        <span><%= label_tag(:country_of_birth, "country of birth", class: "label") %><select>
         <% @country.each do |country|%>
           <option value="<%=@user.country_of_birth%>"><%=country.name%></option>
         <%end%></select></span>
@@ -34,10 +34,10 @@
     </tr>
     <tr>
       <td>
-        <span><%= label_tag(:city_of_origin, "city of origin") %><%= f.text_field :city_of_origin%></span>
+        <span><%= label_tag(:city_of_origin, "city of origin", class: "label") %><%= f.text_field :city_of_origin%></span>
       </td>
       <td>
-        <span><%= label_tag(:country_of_origin, "country of origin") %><select>
+        <span><%= label_tag(:country_of_origin, "country of origin", class: "label") %><select>
         <% @country.each do |country|%>
           <option value="<%=@user.country_of_origin%>"><%=country.name%></option>
         <%end%></select></span>
@@ -45,15 +45,15 @@
     </tr>
     <tr>
       <td colspan="2">
-        <span><%= label_tag(:current_city, "current city") %><%= f.text_field :current_city %></span>
+        <span><%= label_tag(:current_city, "current city", class: "label") %><%= f.text_field :current_city %></span>
       </td>
     </tr>
     <tr>
       <td colspan="2">
-        <span><%= label_tag(:phone_number, "phone number") %><%= f.text_field :phone_number %></span>
+        <span><%= label_tag(:phone_number, "phone number", class: "label") %><%= f.text_field :phone_number %></span>
       </td>
     </tr>
-    <tr><td class="form-label">TRIAGE</td></tr>
+    <tr><td class="white">TRIAGE</td></tr>
     <tr>
       <td>
         Known health issues/disabilities<br>
@@ -85,7 +85,7 @@
         </table>
       </td>
     </tr>
-    <tr><td class="form-label">PASSWORD</td></tr>
+    <tr><td class="white">PASSWORD</td></tr>
     <tr>
       <td colspan="2">
         <%= f.text_field :key%>
@@ -93,7 +93,7 @@
     </tr>
     <tr>
       <td>
-        <%= f.submit "Submit", class:"button" %>
+        <%= f.submit "Submit", class:"round button" %>
       </td>
     </tr>
   </table>
