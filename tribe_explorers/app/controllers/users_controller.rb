@@ -24,6 +24,7 @@ class UsersController < ApplicationController
 
   def family
     @user = User.new
+    @country = Country.all
     render "users/family"
   end
 

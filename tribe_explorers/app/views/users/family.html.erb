@@ -1,8 +1,11 @@
 <div class="row">
   <div class="small-12 columns">
+    <%= link_to "Back", dashboard_path%>
     <h2>OK, let's start with finding family.</h2>
-    <div data-form="search">
-    <%= render partial: "search_form.html.erb", locals: {user: @user} %>
+    <span><h2>How many people are you looking for? <input data-value="queries" type="text"/></h2></span>
+
+    <div data-river="search">
+      <%= render partial: "search_form", locals: {user: @user} %>
     </div>
   </div>
 </div>
