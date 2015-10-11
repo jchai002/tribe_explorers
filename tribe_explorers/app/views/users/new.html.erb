@@ -1,13 +1,23 @@
+<div class="row">
+<div class="small-12 medium-9 medium-centered columns">
 <h1>Sign Up</h1>
-
 <%= form_for @user do |f| %>
-  <p><%= f.text_field :name, placeholder: "full name" %></p>
-  <p><%= f.text_field :dob, placeholder: "date of birth" %></p>
-  <p><%= f.text_field :country_of_birth, placeholder: "country of birth" %></p>
-  <p><%= f.text_field :city_of_birth, placeholder: "city of birth" %></p>
-  <p><%= f.text_field :country_of_origin, placeholder: "country of origin" %></p>
-  <p><%= f.text_field :city_of_origin, placeholder: "city of origin" %></p>
-  <p><%= f.text_field :current_city, placeholder: "current city" %></p>
+  <span><%= label_tag(:firstname, "given name") %><%= f.text_field :firstname %></span>
+  <span><%= label_tag(:lastname, "family name") %><%= f.text_field :lastname %></span>
+  <span><%= label_tag(:dob, "date of birth") %><%= f.text_field :dob %></span>
+  <span><%= label_tag(:city_of_birth, "city of birth") %><%= f.text_field :city_of_birth%></span>
+  <span><%= label_tag(:country_of_birth, "country_of_birth")%><select>
+  <% @country.each do |country|%>
+  <option value="<%=@user.country_of_birth%>"><%=country.name%></option>
+  <%end%></select></span>
+  <span><%= label_tag(:city_of_origin, "city of origin") %><%= f.text_field :city_of_origin%></span> 
+  <span><%= label_tag(:country_of_origin, "country of origin") %><select>
+  <% @country.each do |country|%>
+  <option value="<%=@user.country_of_origin%>"><%=country.name%></option>
+  <%end%></select></span>
+  <span><%= label_tag(:current_city, "current city") %><%= f.text_field :current_city %></span>
 
-  <p><%= f.submit "Submit" %></p>
+  <span><%= f.submit "Submit", class:"button" %></span>
 <% end %>
+</div>
+</div>
