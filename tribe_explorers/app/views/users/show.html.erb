@@ -1,9 +1,8 @@
 <div class="content">
 <div class="row">
  <div class="small-12 medium-9 medium-centered text-center columns">
-    <%=image_tag(@user.picture)%>
     <br><br>
-    <%=image_tag('profile.png', :id=>"profile-pic")%>
+    <%=image_tag(@user.picture, :id=>"profile-pic")%>
     <h1 class="text-center"><%= @user.firstname.capitalize %> <%= @user.lastname.capitalize %></h1>
     <h4>Last login: <%= timestamp(@user.updated_at) %></h4>
     <br>
