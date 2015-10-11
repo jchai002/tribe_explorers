@@ -1,12 +1,13 @@
 <div class="row session-bg">
  <div class="small-12 medium-9 medium-centered columns">
- <div class="session text-center">
-  <h1>Hi there, we're glad you made it.<br>
-    We'll help you get settled. 
+ <div class="session text-left">
+  <h1>Hi there, we're glad you made it. We'll help you get settled. 
   </h1>
   <br>
+  <%=image_tag('keepkey.png')%>
+  <p>Connect your KeepKey to this computer and type in your private password.</p>
     <%= form_for :session, url: sessions_path do |f| %>
-     <p><%= f.password_field :key, placeholder: "enter your key" %></p>
+     <p><%= f.password_field :key, placeholder: "password" %></p>
      <p><%= f.submit "Submit", class:"button round"%></p>
     <%end%>
   </div>
