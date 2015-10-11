@@ -1,1 +1,9 @@
-<h1 class="center">Log In</h1>
+<center>
+  <h1>Hi there, we're glad you made it.<br>
+    We'll help you get settled. 
+  </h1>
+    <%= form_for :session, url: sessions_path do |f| %>
+     <p><%= f.password_field :key, placeholder: "enter your key" %></p>
+     <p><%= f.submit "Submit"%></p>
+    <%end%>
+</center>
