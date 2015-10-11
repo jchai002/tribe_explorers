@@ -2,10 +2,14 @@
   <div class="small-12 columns">
     <%= link_to "Back", dashboard_path%>
     <h2>OK, let's start with finding family.</h2>
-    <span><h2>How many people are you looking for? <input data-value="queries" type="text"/></h2></span>
-
-    <div data-river="search">
-      <%= render partial: "search_form", locals: {user: @user} %>
+    <div class="small-3 columns">
+      <label>How many people are you looking for?</label>
     </div>
+    <div class="small-9 columns">
+      <input class="queries" data-value="queries" type="text"/>
+    </div>
+    <ul class="search-river" data-river="search">
+      <%= render partial: "search_form", locals: {user: @user} %>
+    </ul>
   </div>
 </div>

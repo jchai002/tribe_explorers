@@ -1,11 +1,35 @@
 <div class="hidden">
+  <li>
 <div class="small-5 columns" data-form="search">
   <%= form_for user, url: search_path do |f| %>
-  <span><%= label_tag(:firstname, "given name") %><%= f.text_field :firstname %></span>
-  <span><%= label_tag(:lastname, "family name") %><%= f.text_field :lastname %></span>
-  <span><%= label_tag(:dob, "date of birth") %><%= f.text_field :dob %></span>
-  <span><%= label_tag(:country_of_birth, "country_of_birth")%><select>
-  <span><%= f.submit "Submit", class:"button" %></span>
+      <div class="small-3 columns">
+        <%= label_tag(:firstname, "given name") %>
+      </div>
+      <div class="small-9 columns">
+        <%= f.text_field :firstname %>
+      </div>
+      <div class="small-3 columns">
+        <%= label_tag(:lastname, "family name") %>
+      </div>
+      <div class="small-9 columns">
+        <%= f.text_field :lastname %>
+      </div>
+      <div class="small-3 columns">
+        <%= label_tag(:dob, "date of birth") %>
+      </div>
+      <div class="small-9 columns">
+      <%= f.text_field :dob %>
+      </div>
+      <div class="small-6 columns">
+        <%= label_tag(:country_of_birth, "country_of_birth")%>
+      </div>
+      <div class="small-6 columns">
+        <select>
+        </div>
+    
+<!--         <%= f.submit "Submit", class:"button" %></span> -->
   <% end %>
 </div>
+</div>
+</li>
 </div>
