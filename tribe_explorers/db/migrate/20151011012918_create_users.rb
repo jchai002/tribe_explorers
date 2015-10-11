@@ -10,7 +10,6 @@ class CreateUsers < ActiveRecord::Migration
       t.string :current_city
       t.string :city_of_birth
       t.string :city_of_origin
-      
       t.date :dob
 
       t.timestamps null: false
