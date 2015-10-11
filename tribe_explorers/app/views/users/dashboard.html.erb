@@ -1,14 +1,17 @@
+<div class="small-12 medium-9 medium-centered columns">
 <h1>Hi, <%=link_to(@user.firstname, user_path(@user))%></h1>
 <h2>You last logged in on <%=@user.updated_at%></h2>
 <%=link_to('View full profile', user_path(@user))%>
 <h1> To get started, let us know what you need: </h1>
+<ul class="small-block-grid-2 large-block-grid-4">
+<li><div class="flex"><%=link_to("Find Family", find_user_path)%></div></li>
+<li><div class="flex"><%=link_to("Healthcare", dashboard_path)%></div></li>
+<li><div class="flex"><%=link_to("Job", dashboard_path)%></div></li>
+<li><div class="flex"><%=link_to("Housing", dashboard_path)%></div></li>
 
-<%=link_to("Find Family", find_user_path)%>
-<%=link_to("Healthcare", dashboard_path)%>
-<%=link_to("Job", dashboard_path)%>
-<%=link_to("Housing", dashboard_path)%><br>
-
-<%=link_to("Bank Account", dashboard_path)%>
-<%=link_to("School", dashboard_path)%>
-<%=link_to("Transportation", dashboard_path)%>
-<%=link_to("Communication", dashboard_path)%>
+<li><div class="flex"><%=link_to("Bank Account", dashboard_path)%></div></li>
+<li><div class="flex"><%=link_to("School", dashboard_path)%></div></li>
+<li><div class="flex"><%=link_to("Transportation", dashboard_path)%></div></li>
+<li><div class="flex"><%=link_to("Communication", dashboard_path)%></div></li>
+</ul>
+</div>
