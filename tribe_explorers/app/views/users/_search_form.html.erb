@@ -24,6 +24,11 @@
       </div>
       <div class="small-6 columns">
         <select data-select="country">
+          <option>please select country</option>
+          <% countries.each do |country| %>
+          <option><%= country.name %></option>
+          <% end %>
+        </select>
         </div>
     
 <!--         <%= f.submit "Submit", class:"button" %></span> -->
