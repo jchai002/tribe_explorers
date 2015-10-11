@@ -1383,7 +1383,7 @@ $tabs-navigation-font-family: $body-font-family;
  $topbar-bg-color: $header-bar-color;
  // $topbar-bg: $topbar-bg-color;
  // Height and margin
- $topbar-height: rem-calc(60);
+ $topbar-height: rem-calc(80);
  // $topbar-margin-bottom: 0;
  // Controlling the styles for the title in the top bar
  // $topbar-title-weight: $font-weight-normal;
@@ -1395,7 +1395,7 @@ $tabs-navigation-font-family: $body-font-family;
  // $topbar-link-color-active: $steel;
  // $topbar-link-color-active-hover: $iron;
  // $topbar-link-weight: $font-weight-normal;
- // $topbar-link-font-size: rem-calc(13);
+ $topbar-link-font-size: rem-calc(20);
  // $topbar-link-hover-lightness: -10%; // Darken by 10%
  $topbar-link-bg: rgba(255,255,255,0);
  $topbar-link-bg-hover: rgba(255,255,255,0);

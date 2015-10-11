@@ -1,23 +1,23 @@
 <% unless current_page?(root_path) %>
-  <nav class="top-bar hide-for-small" data-topbar>
+  <nav class="top-bar" data-topbar>
     <ul class="title-area">
       <li class="name">
         <h1>
           <% if current_user %>
-            <a href="<%=dashboard_path%>"><span class="blinking-cursor">_</span></a>
+            <%=link_to image_tag("akiles_logo.png"), dashboard_path%>
           <% else %>
-            <a href="<%=root_path%>"><span class="blinking-cursor">_</span></a>
+            <%=link_to image_tag("akiles_logo.png"), root_path%>
           <% end %>
         </h1>
       </li>
       <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
     </ul>
 
-    <section class="top-bar-section hide-for-small">
+    <section class="top-bar-section">
+      <%=image_tag('group.png', class: "center")%>
       <ul class="right">
-      <li class="vertical-align"><%=image_tag('group.png')%></li>
-      <li><a id="about-button">About</a></li>
-      <li><a id="contact-button">Contact</a></li>
+      <li><a id="about-button">Balance*100</a></li>
+      <li><a id="contact-button">History</a></li>
       <% if current_user %>
         <li><%= link_to "Log Out", logout_path, method: "delete" %></li>
       <% end %>
