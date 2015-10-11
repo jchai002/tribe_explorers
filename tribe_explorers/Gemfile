@@ -29,6 +29,10 @@ gem "paperclip", "~> 4.1"
 
 gem 'foundation-rails', '~> 5.5.1.2'
 
+gem 'factory_girl_rails'
+
+gem 'faker'
+
 gem 'foundation-icons-sass-rails'
 
 # Use ActiveModel has_secure_password
