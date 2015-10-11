@@ -5,3 +5,37 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+first_params = {
+  user: "James",
+  country_of_birth: "U.S.",
+  current_country: "U.S.",
+  current_city: "Mineola",
+  city_of_birth:  "Mineola",
+  city_of_origin: "Mineola",
+  dob: "03-23-1991"
+}
+
+second_params = {
+  name: "John",
+  country_of_birth: "U.S.",
+  current_country: "U.S.",
+  current_city: "Paris",
+  city_of_birth:  "Paris",
+  city_of_origin: "Paris",
+  dob: "10-10-1990"
+}
+
+second_params = {
+  name: "tom",
+  country_of_birth: "U.S.",
+  current_country: "U.S.",
+  current_city: "Paris",
+  city_of_birth:  "Paris",
+  city_of_origin: "Paris",
+  dob: "10-10-1990"
+}
+
+User.create(first_params)
+User.create(second_params)
+User.create(third_params)
