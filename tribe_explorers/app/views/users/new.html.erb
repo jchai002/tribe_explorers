@@ -2,7 +2,8 @@
 <div class="small-12 medium-9 medium-centered columns">
 <h1>Sign Up</h1>
 <%= form_for @user do |f| %>
-  <span><%= label_tag(:name, "full name") %><%= f.text_field :name %></span>
+  <span><%= label_tag(:firstname, "given name") %><%= f.text_field :firstname %></span>
+  <span><%= label_tag(:lastname, "family name") %><%= f.text_field :lastname %></span>
   <span><%= label_tag(:dob, "date of birth") %><%= f.text_field :dob %></span>
   <span><%= label_tag(:city_of_birth, "city of birth") %><%= f.text_field :city_of_birth%></span>
   <span><%= label_tag(:country_of_birth, "country_of_birth")%><select>
