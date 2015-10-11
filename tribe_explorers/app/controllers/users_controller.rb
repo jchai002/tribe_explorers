@@ -14,6 +14,11 @@ class UsersController < ApplicationController
     end
   end
 
+  def search
+    @user = User.where(user_params).first
+    render "users/search"
+  end
+
   def show
     @user = User.find(params[:id])
   end
