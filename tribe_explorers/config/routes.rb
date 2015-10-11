@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   resources :users
   get '/find_user' => 'users#find_user'
+  get '/users/search' => 'users#search'
 
   get '/login' => 'sessions#new'
   post '/sessions' => 'sessions#create'
