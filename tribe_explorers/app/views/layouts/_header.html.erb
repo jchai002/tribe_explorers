@@ -1,4 +1,4 @@
-<nav class="top-bar hide-for-small" data-topbar>
+<nav class="top-bar" data-topbar>
   <ul class="title-area">
     <li class="name">
       <h1>
@@ -12,13 +12,12 @@
     <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
   </ul>
 
-  <section class="top-bar-section hide-for-small">
+  <section class="top-bar-section">
 
     <ul class="right">
+    <li class="vertical-align"><%=image_tag('group.png')%></li>
       <li><a id="about-button">About</a></li>
-      <li class="divider"></li>
       <li><a id="contact-button">Contact</a></li>
-      <li class="divider"></li>
       <% if current_user %>
         <li><%= link_to "Log Out", logout_path, method: "delete" %></li>
         <li class="divider"></li>
