@@ -79,3 +79,13 @@ h1,p,label,li {
 .white {
   color: #FFF;
 }
+
+.white-bg {
+  background: #FFF;
+}
+
+.bg-div {
+  position: absolute;
+  right: 1em;
+  z-index: -1;
+}
