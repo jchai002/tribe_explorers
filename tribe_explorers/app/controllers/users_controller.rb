@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_filter :authenticate_user, except: [:new, :create]
+
   def new
     @user = User.new
     @country = Country.all
@@ -14,6 +16,18 @@ class UsersController < ApplicationController
     end
   end
 
+  def edit
+    @user = current_user
+    @country = Country.all
+  end
+
+  def update
+    @user = current_user
+    if @user.update_attributes(user_params)
+      redirect_to user_path(@user)
+    end
+  end
+
   def search
     if User.where(user_params).first
       render nothing: true, status: 200
@@ -24,6 +38,7 @@ class UsersController < ApplicationController
 
   def family
     @user = User.new
+    @country = Country.all
     render "users/family"
   end
 

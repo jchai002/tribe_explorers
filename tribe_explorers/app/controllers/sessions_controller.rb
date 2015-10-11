@@ -9,6 +9,6 @@ class SessionsController < ApplicationController
 
   def destroy
     session.clear
-    #redirect_to not established yet
+    redirect_to root_path
   end
 end

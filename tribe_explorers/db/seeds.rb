@@ -7,33 +7,39 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 first_params = {
-  user: "James",
+  firstname: "James",
+  lastname: "Joe",
   country_of_birth: "U.S.",
   current_country: "U.S.",
   current_city: "Mineola",
   city_of_birth:  "Mineola",
   city_of_origin: "Mineola",
-  dob: "03-23-1991"
+  dob: "03-23-1991",
+  key: "password"
 }
 
 second_params = {
-  name: "John",
+  firstname: "James",
+  lastname: "James",
   country_of_birth: "U.S.",
   current_country: "U.S.",
   current_city: "Paris",
   city_of_birth:  "Paris",
   city_of_origin: "Paris",
-  dob: "10-10-1990"
+  dob: "10-10-1990",
+  key: "password"
 }
 
 third_params = {
-  name: "tom",
+  firstname: "tom",
+  lastname: "Jerry",
   country_of_birth: "U.S.",
   current_country: "U.S.",
   current_city: "Paris",
   city_of_birth:  "Paris",
   city_of_origin: "Paris",
-  dob: "9-8-1981"
+  dob: "9-8-1981",
+  key: "password"
 }
 
 Country.create(name: "United States")
