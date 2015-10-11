@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
-  root to: 'welcome#show'
-  get '/welcome' => 'welcome#show'
+  root to: 'sessions#new'
+  get '/dashboard' => 'users#dashboard'
 
   resources :users
   get '/find_user' => 'users#find_user'
