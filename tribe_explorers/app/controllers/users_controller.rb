@@ -38,7 +38,7 @@ class UsersController < ApplicationController
 
   def family
     @user = User.new
-    @country = Country.all
+    @countries = Country.all
     render "users/family"
   end
 

@@ -42,6 +42,13 @@ third_params = {
   key: "password"
 }
 
+Country.create(name: "United States")
+Country.create(name: "England")
+Country.create(name: "Turkey")
+Country.create(name: "China")
+Country.create(name: "Nepal")
+Country.create(name: "Nigeria")
+
 User.create(first_params)
 User.create(second_params)
 User.create(third_params)
