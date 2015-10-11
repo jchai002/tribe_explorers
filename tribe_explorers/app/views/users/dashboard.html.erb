@@ -6,9 +6,10 @@
   	<h1>Hi, <%=link_to(@user.firstname.capitalize, user_path(@user))%></h1>
   	<h4>You last logged in on <%=timestamp(@user.updated_at)%></h4>
   	<%=link_to('View full profile', user_path(@user))%>
+    <h2 class="center subtitle">To get started, let us know what you need:</h2>
   </div>
-  <br>
-    <h1> To get started, let us know what you need: </h1>
+  <p></p>
+  <div class="small-12 medium-9 small-centered columns">
   	<ul class="small-block-grid-2 large-block-grid-4">
   		<li><div class="flex"><%=link_to(image_tag('find-people.png'), find_family_path)%></div></li>
   		<li><div class="flex"><%=link_to(image_tag('housing.png'), dashboard_path)%></div></li>
