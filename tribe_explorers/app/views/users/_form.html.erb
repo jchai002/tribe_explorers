@@ -1,17 +1,100 @@
 <%= form_for @user do |f| %>
-<span><%= label_tag(:firstname, "given name") %><%= f.text_field :firstname %></span>
-<span><%= label_tag(:lastname, "family name") %><%= f.text_field :lastname %></span>
-<span><%= label_tag(:dob, "date of birth") %><%= f.text_field :dob %></span>
-<span><%= label_tag(:city_of_birth, "city of birth") %><%= f.text_field :city_of_birth%></span>
-<span><%= label_tag(:country_of_birth, "country_of_birth")%><select>
-<% @country.each do |country|%>
-<option value="<%=@user.country_of_birth%>"><%=country.name%></option>
-<%end%></select></span>
-<span><%= label_tag(:city_of_origin, "city of origin") %><%= f.text_field :city_of_origin%></span>
-<span><%= label_tag(:country_of_origin, "country of origin") %><select>
-<% @country.each do |country|%>
-<option value="<%=@user.country_of_origin%>"><%=country.name%></option>
-<%end%></select></span>
-<span><%= label_tag(:current_city, "current city") %><%= f.text_field :current_city %></span>
-<span><%= f.submit "Submit", class:"button" %></span>
+  <table>
+    <tr><td class="form-label">REGISTRATION</td></tr>
+    <tr>
+      <td>
+        <span><%= label_tag(:firstname, "first name") %><%= f.text_field :firstname %></span>
+      </td>
+      <td>
+        <span><%= label_tag(:lastname, "last name") %><%= f.text_field :lastname %></span>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <span><%= label_tag(:dob, "date of birth") %><%= f.text_field :dob %></span>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <%= label_tag(:gender, "gender") %>
+        Female <%= f.radio_button :gender, "female" %>
+        Male <%= f.radio_button :gender, "male" %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span><%= label_tag(:city_of_birth, "city of birth") %><%= f.text_field :city_of_birth%></span>
+      </td>
+      <td>
+        <span><%= label_tag(:country_of_birth, "country of birth")%><select>
+        <% @country.each do |country|%>
+          <option value="<%=@user.country_of_birth%>"><%=country.name%></option>
+        <%end%></select></span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span><%= label_tag(:city_of_origin, "city of origin") %><%= f.text_field :city_of_origin%></span>
+      </td>
+      <td>
+        <span><%= label_tag(:country_of_origin, "country of origin") %><select>
+        <% @country.each do |country|%>
+          <option value="<%=@user.country_of_origin%>"><%=country.name%></option>
+        <%end%></select></span>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <span><%= label_tag(:current_city, "current city") %><%= f.text_field :current_city %></span>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <span><%= label_tag(:phone_number, "phone number") %><%= f.text_field :phone_number %></span>
+      </td>
+    </tr>
+    <tr><td class="form-label">TRIAGE</td></tr>
+    <tr>
+      <td>
+        Known health issues/disabilities<br>
+        <table>
+          <tr>
+            <td>
+              <input type="checkbox">High blood pressue
+            </td>
+            <td>
+              <input type="checkbox">Hearing impaired
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="checkbox">Vision impaired
+            </td>
+            <td>
+              <input type="checkbox">Dizziness
+            </tr>
+          </td>
+          <tr>
+            <td>
+              <input type="checkbox">Fever
+            </td>
+            <td>
+              <input type="checkbox">Wounded
+            </tr>
+          </td>
+        </table>
+      </td>
+    </tr>
+    <tr><td class="form-label">PASSWORD</td></tr>
+    <tr>
+      <td colspan="2">
+        <%= f.text_field :key%>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <%= f.submit "Submit", class:"button" %>
+      </td>
+    </tr>
+  </table>
 <% end %>
