@@ -1,10 +1,14 @@
 <div class="content">
 <div class="row">
   <div class="small-12 medium-9 medium-centered columns">
+   <div class="small-12 text-center columns">
+      <%=image_tag('profile.png', :id=>"profile-pic")%>
   	<h1>Hi, <%=link_to(@user.firstname.capitalize, user_path(@user))%></h1>
-  	<h2>You last logged in on <%=timestamp(@user.updated_at)%></h2>
+  	<h4>You last logged in on <%=timestamp(@user.updated_at)%></h4>
   	<%=link_to('View full profile', user_path(@user))%>
-  	<h1> To get started, let us know what you need: </h1>
+  </div>
+  <br>
+    <h1> To get started, let us know what you need: </h1>
   	<ul class="small-block-grid-2 large-block-grid-4">
   		<li><div class="flex"><%=link_to(image_tag('find-people.png'), find_family_path)%></div></li>
   		<li><div class="flex"><%=link_to(image_tag('housing.png'), dashboard_path)%></div></li>
