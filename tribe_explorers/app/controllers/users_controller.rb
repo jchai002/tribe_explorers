@@ -19,6 +19,11 @@ class UsersController < ApplicationController
     render "users/search"
   end
 
+  def family
+    @user = User.new
+    render "users/family"
+  end
+
   def show
     @user = User.find(params[:id])
   end
