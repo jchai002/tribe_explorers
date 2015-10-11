@@ -26,14 +26,14 @@ second_params = {
   dob: "10-10-1990"
 }
 
-second_params = {
+third_params = {
   name: "tom",
   country_of_birth: "U.S.",
   current_country: "U.S.",
   current_city: "Paris",
   city_of_birth:  "Paris",
   city_of_origin: "Paris",
-  dob: "10-10-1990"
+  dob: "9-8-1981"
 }
 
 User.create(first_params)
