@@ -5,7 +5,7 @@
 
     <%= @user.picture %>
 
-    <p class="text-center"><%= link_to "Change My Info", edit_user_path(@user), class: "button" %></p>
+    <p class="text-center"><%= link_to "Update My Info", edit_user_path(@user), class: "button" %></p>
 
     <% unless @user.dob.nil? %>
       Date of Birth: <%= @user.dob %><br>
