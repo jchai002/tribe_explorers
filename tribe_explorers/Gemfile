@@ -29,6 +29,8 @@ gem "paperclip", "~> 4.1"
 
 gem 'foundation-rails', '~> 5.5.1.2'
 
+gem 'faker'
+
 gem 'foundation-icons-sass-rails'
 
 # Use ActiveModel has_secure_password
@@ -43,6 +45,7 @@ gem 'foundation-icons-sass-rails'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'rspec-rails'
   gem 'pry'
 end
 
