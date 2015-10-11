@@ -1,29 +1,31 @@
 first_params = {
-  firstname: "James",
-  lastname: "Joe",
-  country_of_birth: "U.S.",
+  firstname: "Ahmad",
+  lastname: "Basara",
+  country_of_birth: "Syria",
   current_country: "U.S.",
-  current_city: "Mineola",
-  city_of_birth:  "Mineola",
-  city_of_origin: "Mineola",
+  current_city: "New York",
+  city_of_birth:  "Daraa",
+  city_of_origin: "Daraa",
   dob: "03-23-1991",
-  key: "password"
+  key: "foo",
+  picture: "https://files.slack.com/files-pri/T0C0NBYGK-F0C8JCZRA/profile.png"
 }
 
 second_params = {
-  firstname: "James",
-  lastname: "James",
-  country_of_birth: "U.S.",
+  firstname: "Nooda",
+  lastname: "Basara",
+  country_of_birth: "Syria",
   current_country: "U.S.",
-  current_city: "Paris",
-  city_of_birth:  "Paris",
-  city_of_origin: "Paris",
+  current_city: "New York",
+  city_of_birth:  "Daraa",
+  city_of_origin: "Daraa",
   dob: "10-10-1990",
-  key: "password"
+  key: "bar",
+  picture: "https://slack-files.com/files-tmb/T0C0NBYGK-F0C8RJUKC-ec6f030f00/profile-2_360.png"
 }
 
 third_params = {
-  firstname: "tom",
+  firstname: "Tom",
   lastname: "Jerry",
   country_of_birth: "U.S.",
   current_country: "U.S.",
@@ -31,7 +33,8 @@ third_params = {
   city_of_birth:  "Paris",
   city_of_origin: "Paris",
   dob: "9-8-1981",
-  key: "password"
+  key: "password",
+  picture: "https://files.slack.com/files-pri/T0C0NBYGK-F0C8JCZRA/profile.png"
 }
 
 Country.create(name: "United States")
