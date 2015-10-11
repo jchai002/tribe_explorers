@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root to: 'static_pages#index'
+  root to: 'welcome#show'
   get '/welcome' => 'welcome#show'
 
   resources :users
