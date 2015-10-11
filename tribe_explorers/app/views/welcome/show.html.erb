@@ -1,14 +1,17 @@
-<h1>Hi, <%= @user.firstname %></h1>
-<h2>You last logged in on <%=@user.updated_at%></h2>
-<h2><%=link_to('View my full profile', user_path(@user))%>
-<h1> To get started, let us know what you need: </h1>
+<div class="small-12 medium-9 medium-centered columns">
+	<h1>Hi, <%=link_to(@user.firstname.capitalize, user_path(@user))%></h1>
+	<h2>You last logged in on <%=timestamp(@user.updated_at)%></h2>
+	<%=link_to('View full profile', user_path(@user))%>
+	<h1> To get started, let us know what you need: </h1>
+	<ul class="small-block-grid-2 large-block-grid-4">
+	<li><div class="flex"><%=link_to(image_tag('find-people.png'), find_user_path)%></div></li>
+		<li><div class="flex"><%=link_to(image_tag('healthcare.png'), dashboard_path)%></div></li>
+		<li><div class="flex"><%=link_to(image_tag('job-search.png'), dashboard_path)%></div></li>
+		<li><div class="flex"><%=link_to(image_tag('barclays.png'), dashboard_path)%></div></li>
 
-<%=link_to("Find Family", find_user_path)%>
-<%=link_to("Healthcare", root_path)%>
-<%=link_to("Job", root_path)%>
-<%=link_to("Housing", root_path)%><br>
-
-<%=link_to("Bank Account", root_path)%>
-<%=link_to("School", root_path)%>
-<%=link_to("Transportation", root_path)%>
-<%=link_to("Communication", root_path)%>
+		<li><div class="flex"><%=link_to(image_tag('housing.png'), dashboard_path)%></div></li>
+		<li><div class="flex"><%=link_to(image_tag('education.png'), dashboard_path)%></div></li>
+		<li><div class="flex"><%=link_to(image_tag('transportation.png'), dashboard_path)%></div></li>
+		<li><div class="flex"><%=link_to(image_tag('communication.png'), dashboard_path)%></div></li>
+	</ul>
+</div>
