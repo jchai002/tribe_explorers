@@ -30,3 +30,26 @@
       -webkit-transition: width 0.7s ease-out;
       transition: width 0.7s ease-out;
    }
+
+   .session-bg {
+ -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-image: url("session-bg");
+  background-repeat: no-repeat;
+   -webkit-filter: sepia(20%);
+  -moz-filter: sepia(20%);
+  -o-filter: sepia(20%);
+  -ms-filter: sepia(20%);
+  filter: sepia(20%);
+   }
+    .session 
+   {
+      background-color: rgba( #fcfcfc, 0.5 );
+      margin-top: 10%;
+      margin-bottom: 10%;
+      padding: 5em;
+      width: auto;
+      height: 30%;
+   }
