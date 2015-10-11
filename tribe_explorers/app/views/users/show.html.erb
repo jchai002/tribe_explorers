@@ -1,6 +1,29 @@
-<%= @user.picture %>
+<div class="row">
+ <div class="small-12 medium-9 medium-centered columns">
+    <%= link_to "Back", dashboard_path %>
+    <h1 class="text-center"><%= @user.firstname.capitalize %> <%= @user.lastname.capitalize %></h1>
 
-Date of Birth: <%= @user.dob %><br>
-Born in <%= @user.city_of_birth %>, <%= @user.country_of_birth %><br>
-Came from <%= @user.city_of_origin %>, <%= @user.country_of_origin %><br>
-Last logged in on <%= @user.updated_at %>
+    <%= @user.picture %>
+
+    <p class="text-center"><%= link_to "Change My Info", edit_user_path(@user), class: "button" %></p>
+
+    <% unless @user.dob.nil? %>
+      Date of Birth: <%= @user.dob %><br>
+    <% end %>
+
+    <% unless @user.city_of_birth.nil? %>
+      Born in <%= @user.city_of_birth %>, <%= @user.country_of_birth %><br>
+    <% end %>
+
+    <% unless @user.city_of_origin.nil? %>
+      Came from <%= @user.city_of_origin %>, <%= @user.country_of_origin %><br>
+    <% end %>
+
+    <% unless @user.current_city.nil? %>
+      Current city: <%= @user.current_city %>
+    <% end %>
+
+    Last logged in on <%= timestamp(@user.updated_at) %>
+
+  </div>
+</div>
