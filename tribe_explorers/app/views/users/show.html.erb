@@ -1,5 +1,7 @@
 <%= @user.picture %>
 
+<p><%= link_to "Change Info", user_path(@user) %></p>
+
 Date of Birth: <%= @user.dob %><br>
 Born in <%= @user.city_of_birth %>, <%= @user.country_of_birth %><br>
 Came from <%= @user.city_of_origin %>, <%= @user.country_of_origin %><br>
