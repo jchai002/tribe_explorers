@@ -1,0 +1,13 @@
+<h1>Sign Up</h1>
+
+<%= form_for @user do |f| %>
+  <p><%= f.text_field :name, placeholder: "full name" %></p>
+  <p><%= f.text_field :dob, placeholder: "date of birth" %></p>
+  <p><%= f.text_field :country_of_birth, placeholder: "country of birth" %></p>
+  <p><%= f.text_field :city_of_birth, placeholder: "city of birth" %></p>
+  <p><%= f.text_field :country_of_origin, placeholder: "country of origin" %></p>
+  <p><%= f.text_field :city_of_origin, placeholder: "city of origin" %></p>
+  <p><%= f.text_field :current_city, placeholder: "current city" %></p>
+
+  <p><%= f.submit "Submit" %></p>
+<% end %>
