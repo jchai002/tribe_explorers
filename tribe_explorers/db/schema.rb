@@ -14,20 +14,21 @@
 ActiveRecord::Schema.define(version: 20151011061406) do
 
   create_table "cities", force: :cascade do |t|
-    t.string   "name",       null: false
+    t.string   "name"
     t.integer  "country_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "countries", force: :cascade do |t|
-    t.string   "name",       null: false
+    t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "name",              null: false
+    t.string   "firstname",         null: false
+    t.string   "lastname",          null: false
     t.string   "picture"
     t.string   "country_of_birth"
     t.string   "country_of_origin"
