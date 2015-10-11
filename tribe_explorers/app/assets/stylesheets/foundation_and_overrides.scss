@@ -98,7 +98,7 @@ $font-family-monospace: 'Nunito', serif;
 // $font-weight-normal: normal !default;
 // $font-weight-bold: bold !default;
 
-$header-bar-color: rgba( #000000, 0 );
+$header-bar-color: #2ccbdd;
 $header-dropdown-color: rgba( #666666, 0.3 );
 $header-links-color: #222222;
 $main-headers-font-color: #222222;
@@ -1383,7 +1383,7 @@ $tabs-navigation-font-family: $body-font-family;
  $topbar-bg-color: $header-bar-color;
  // $topbar-bg: $topbar-bg-color;
  // Height and margin
- $topbar-height: rem-calc(80);
+ $topbar-height: rem-calc(60);
  // $topbar-margin-bottom: 0;
  // Controlling the styles for the title in the top bar
  // $topbar-title-weight: $font-weight-normal;

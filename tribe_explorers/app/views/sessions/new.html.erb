@@ -1,9 +1,12 @@
-<center>
+<div class="row">
+ <div class="small-12 medium-9 medium-centered columns">
   <h1>Hi there, we're glad you made it.<br>
     We'll help you get settled. 
   </h1>
+
     <%= form_for :session, url: sessions_path do |f| %>
      <p><%= f.password_field :key, placeholder: "enter your key" %></p>
-     <p><%= f.submit "Submit"%></p>
+     <p><%= f.submit "Submit", class:"button"%></p>
     <%end%>
-</center>
+  </div>
+</div>
